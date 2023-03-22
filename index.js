@@ -1,3 +1,5 @@
-import * as ReadSms from './ReadSms';
+import { NativeModules } from 'react-native';
+
+const { ReadSms } = NativeModules;
 
 export default ReadSms;
