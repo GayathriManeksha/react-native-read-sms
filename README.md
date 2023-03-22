@@ -1,6 +1,6 @@
 # React native plugin for Read SMS
 	This plugin is used to read any new upcoming SMS. 
-	Supported and tested up to React Native V0.61.5
+	Supported up to React Native V0.71.4
 
 ## Getting started
 
