@@ -1,5 +1,6 @@
 import { NativeEventEmitter, NativeModules, PermissionsAndroid, Platform } from "react-native";
 
+const ReadSmsEmitter = new NativeEventEmitter(NativeModules.ReadSms);
 
 export async function startReadSMS(callback) {
     let resultFun = (status, sms, error) => {
@@ -11,7 +12,7 @@ export async function startReadSMS(callback) {
         const hasPermission = await hasSMSPermission();
         if (hasPermission) {
             NativeModules.ReadSms.startReadSMS(result => {
-                new NativeEventEmitter(NativeModules.ReadSms)
+                ReadSmsEmitter
                     .addListener('received_sms', (sms) => {
                         resultFun("success", sms);
                     });
@@ -60,6 +61,25 @@ export async function requestReadSMSPermission() {
 
 export function stopReadSMS() {
     if (Platform.OS === 'android') {
+        ReadSmsEmitter.removeAllListeners('received_sms');
         NativeModules.ReadSms.stopReadSMS();
     }
+}
+
+export async function startListSMS(filter){
+    NativeModules.ReadSms.list(JSON.stringify(filter), (fail) => {
+        console.log("OH Snap: " + fail)
+    },
+        (count, smsList) => {
+            console.log('Count: ', count);
+            console.log('List: ', smsList);
+            var arr = JSON.parse(smsList);
+            for (var i = 0; i < arr.length; i++) {
+                var obj = arr[i];
+                console.log("Index: " + i);
+                console.log("-->" + obj.date);
+                console.log("-->" + obj.body);
+            }
+        });
+
 }
