@@ -1,40 +1,20 @@
 {
-  "name": "react-native-read-sms",
-  "title": "React Native Read Sms",
-  "version": "1.0.6",
-  "description": "This plugin is used to read new recived sms.",
+  "name": "react-native-readyoursms",
+  "version": "1.0.0",
+  "description": "This plugin is used to read any new upcoming SMS and read previous sms. ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KetanDhopeshwarkar/react-native-read-sms",
-    "baseUrl": "https://github.com/KetanDhopeshwarkar/react-native-read-sms"
+    "url": "git+https://github.com/GayathriManeksha/react-native-read-sms.git"
   },
-  "keywords": [
-    "android",
-    "iOS",
-    "react-native-read-sms",
-    "read-sms",
-    "react-native"
-  ],
-  "author": {
-    "name": "someone",
-    "username": "someone"
-  },
-  "license": "MIT",
-  "licenseFilename": "LICENSE",
-  "peerDependencies": {
-    "react": "^16.8.1",
-    "react-native": ">=0.60.0-rc.0 <1.0.x"
-  },
-  "devDependencies": {
-    "react": "^16.9.0",
-    "react-native": "^0.61.5"
-  },
+  "author": "GayathriManeksha",
+  "license": "ISC",
+  "types": "./index.d.ts",
   "bugs": {
-    "url": "https://github.com/KetanDhopeshwarkar/react-native-read-sms/issues"
+    "url": "https://github.com/GayathriManeksha/react-native-read-sms/issues"
   },
-  "homepage": "https://github.com/KetanDhopeshwarkar/react-native-read-sms#readme"
+  "homepage": "https://github.com/GayathriManeksha/react-native-read-sms#readme"
 }
