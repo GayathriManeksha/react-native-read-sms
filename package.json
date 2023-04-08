@@ -1,6 +1,6 @@
 {
   "name": "react-native-readyoursms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin is used to read any new upcoming SMS and read previous sms. ",
   "main": "index.js",
   "scripts": {
