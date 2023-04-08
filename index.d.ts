@@ -1,4 +1,4 @@
-declare module "react-native-read-sms" {
+declare module "react-native-readyoursms" {
   type Callback = (
     status: "success" | "error",
     sms: string,
